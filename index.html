@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登壇資料一覧 | 松田健太</title>
+  <meta name="description" content="松田健太の過去の登壇資料（スライド）の一覧です。">
+  <meta property="og:title" content="登壇資料一覧 | 松田健太">
+  <meta property="og:description" content="松田健太の過去の登壇資料（スライド）の一覧です。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #1c1c1c;
+      --muted: #6b6b6b;
+      --border: #e2e0d9;
+      --accent: #e8590c;
+      --accent-soft: #fff0e6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141414;
+        --surface: #1e1e1e;
+        --text: #ececec;
+        --muted: #a0a0a0;
+        --border: #333333;
+        --accent: #ff8a3d;
+        --accent-soft: #2e2017;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Zen Kaku Gothic New", system-ui, -apple-system, "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      font-weight: 500;
+      line-height: 1.7;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 56px 16px 64px; }
+    header h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 900; margin: 0 0 8px; letter-spacing: .02em; }
+    header p { margin: 0; color: var(--muted); }
+    header a { color: inherit; }
+    h2.year {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: .95rem; font-weight: 500; color: var(--muted);
+      margin: 48px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+    }
+    ol.talks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+    .talk {
+      display: block; text-decoration: none; color: inherit;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px 22px; transition: border-color .15s, transform .15s;
+    }
+    .talk:hover, .talk:focus-visible { border-color: var(--accent); transform: translateY(-2px); outline: none; }
+    .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .85rem; color: var(--muted); }
+    .meta time { font-family: "JetBrains Mono", ui-monospace, monospace; }
+    .talk h3 { font-size: 1.25rem; font-weight: 900; margin: 4px 0 6px; line-height: 1.45; }
+    .talk h3 .hot { color: var(--accent); }
+    .talk p { margin: 0; font-size: .95rem; color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding: 0; list-style: none; }
+    .tags li { font-size: .78rem; background: var(--accent-soft); color: var(--accent); padding: 2px 10px; border-radius: 999px; }
+    footer { margin-top: 64px; font-size: .85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>登壇資料一覧</h1>
+      <p>松田健太（<a href="https://qiita.com/kenken38">Qiita @kenken38</a>）の登壇スライドをまとめています。</p>
+    </header>
+
+    <main>
+      <!--
+        スライドを追加するときは、YYYY_MM/<スライド名>/index.html に配置し、
+        該当する年の <ol class="talks"> に <li> を新しい順で追加してください。
+      -->
+      <section>
+        <h2 class="year">2026</h2>
+        <ol class="talks">
+          <li>
+            <a class="talk" href="2026_10/aws-and-bunkyo-resources-index/">
+              <div class="meta">
+                <time datetime="2026-10-16">2026.10.16</time>
+                <span>AWS Education WG</span>
+                <span>49 slides</span>
+              </div>
+              <h3>AWS<span class="hot">×</span>教育の公式リソース<span class="hot">100</span>連発</h3>
+              <p>散らばった AWS の教育向け公式リソースを索引化し、読み方と活用事例を紹介します。</p>
+              <ul class="tags">
+                <li>AWS</li>
+                <li>教育</li>
+                <li>生成AI</li>
+              </ul>
+            </a>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Matsuda Kenta</p>
+    </footer>
+  </div>
+</body>
+</html>
